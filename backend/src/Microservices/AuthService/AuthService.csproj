@@ -9,7 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Features\RacoonNotes.MessageBroker\RacoonNotes.MessageBroker.csproj" />
+    <ProjectReference Include="..\..\Features\RacoonNotes.MongoDbConnector\RacoonNotes.MongoDbConnector.csproj" />
   </ItemGroup>
 
 </Project>
