@@ -21,7 +21,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Features", "Features", "{FB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RacoonNotes.Abstractions", "Foundation\RacoonNotes.Abstractions\RacoonNotes.Abstractions.csproj", "{C0AB3C21-6220-4BE2-8513-628431440EAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RacoonNotes.Errors", "RacoonNotes.Errors\RacoonNotes.Errors.csproj", "{22C59993-4CA2-4B74-BCEE-F5733592B41C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RacoonNotes.Errors", "RacoonNotes.Errors\RacoonNotes.Errors.csproj", "{22C59993-4CA2-4B74-BCEE-F5733592B41C}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{16368BEA-D378-45B2-A330-AF8503F3E062}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{22C59993-4CA2-4B74-BCEE-F5733592B41C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22C59993-4CA2-4B74-BCEE-F5733592B41C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22C59993-4CA2-4B74-BCEE-F5733592B41C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16368BEA-D378-45B2-A330-AF8503F3E062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16368BEA-D378-45B2-A330-AF8503F3E062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16368BEA-D378-45B2-A330-AF8503F3E062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16368BEA-D378-45B2-A330-AF8503F3E062}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
