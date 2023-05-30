@@ -1,0 +1,36 @@
+version: '3.4'
+
+services:
+  authservice:
+    image: ${DOCKER_REGISTRY-}authservice
+    build:
+      context: .
+      dockerfile: Microservices/AuthService/Dockerfile
+
+  mongodb:
+    image: mongo:latest
+    volumes:
+      - mongodb_data:/data/db
+    ports:
+      - 27017:27017
+    hostname: mongodb
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=racoon
+      - RABBITMQ_DEFAULT_PASS=gfyutz
+    hostname: rabbitmq
+
+volumes:
+  mongodb_data:
+  rabbitmq_data:
+
+networks:
+  default:
+    driver: bridge
