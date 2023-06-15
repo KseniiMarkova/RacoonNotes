@@ -19,12 +19,8 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.header-item {
-    color: #191970;
-}
 
 h1 {
-    font-family: 'Outfit';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;

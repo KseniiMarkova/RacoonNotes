@@ -19,7 +19,6 @@ const headerItems: HeaderItemsProps[] = [
     </div>
 </template>
 
-
 <style scoped>
 .header {
     width: 100%;
@@ -47,11 +46,9 @@ const headerItems: HeaderItemsProps[] = [
 }
 
 .span-sign-in {
-    font-family: 'Outfit';
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
-    color: #191970;
 }
 
 </style>

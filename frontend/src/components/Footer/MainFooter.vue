@@ -60,7 +60,6 @@
 }
 
 .information-span{
-    font-family: 'Outfit';
     font-style: normal;
     font-size: 32px;
     color: rgba(25, 25, 112, 0.8);
@@ -73,11 +72,9 @@
 }
 
 .inscriptions-span{
-    font-family: 'Outfit';
     font-style: normal;
     font-weight: 600;
     font-size: 36px;
-    color: #191970;
 }
 
 img{

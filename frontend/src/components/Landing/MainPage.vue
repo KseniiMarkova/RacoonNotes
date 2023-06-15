@@ -73,7 +73,6 @@ const pageItems: MainPageItemProps[] = [
 }
 
 .span-sign-up{
-    font-family: 'Outfit';
     font-size: 40px;
     font-weight: 600;
     font-style: normal;

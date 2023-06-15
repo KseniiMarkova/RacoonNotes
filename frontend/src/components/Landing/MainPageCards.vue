@@ -61,18 +61,12 @@ const isMainPageCardEven = computed(() => {
 }
 
 h2 {
-    font-family: 'Over the Rainbow';
-    font-style: normal;
     font-size: 24px;
-    color: rgba(25, 25, 112, 0.8);
     text-align: center;
 }
 
 h3 {
-    font-family: 'Over the Rainbow';
-    font-style: normal;
     font-size: 20px;
-    color: rgba(25, 25, 112, 0.8);
 }
 
 img {
