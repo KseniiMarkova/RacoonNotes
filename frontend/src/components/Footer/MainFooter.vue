@@ -25,7 +25,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    width: 100%;
     background-color: #DAD3CE;
     padding: 1rem;
 }
@@ -35,7 +34,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    width: 64rem;
 }
 
 .created-by{

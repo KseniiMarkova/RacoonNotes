@@ -1,5 +1,6 @@
-import MainPageVue from '@/components/Landing/MainPage.vue'
-import { createRouter, createWebHistory } from 'vue-router'
+// import MainPageVue from '@/components/Landing/MainPage.vue';
+import MainPageRegistered from '@/components/Landing/MainPageRegistered.vue';
+import { createRouter, createWebHistory } from 'vue-router';
 
 
 const router = createRouter({
@@ -8,7 +9,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: MainPageVue
+      // component: MainPageVue,
+      component: MainPageRegistered,
     },
   ]
 })

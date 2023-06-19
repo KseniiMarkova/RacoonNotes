@@ -1,9 +1,12 @@
 <template>
-    <div class="wrapper-item" :class="{'wrapper-item-even':isMainPageCardEven}">
+    <div class="wrapper-item" 
+    :class="[{'wrapper-item-color':item.isBackgroundPink},
+    {'wrapper-item-direction':item.isDescriptionOnRight},
+    {'wrapper-item-registered':!item.description},]">
         <div class="details-image">
-            <img :src="item.imageSrc" alt="Photo month">
+            <img :src="item.imageSrc" alt="Photo of block">
         </div>
-        <div class="details">
+        <div v-if="item.description" class="details">
             <h2>
                 {{item.title}}
             </h2>
@@ -11,23 +14,24 @@
                 {{item.description}}
             </h3>
         </div>
+        <div v-else class="details-title">
+            <h2>
+                {{ item.title }}
+            </h2>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { computed, type PropType } from 'vue'
+import type { PropType } from 'vue';
 import type { MainPageItemProps } from './models';
+
 const props = defineProps({
     item: {
         type: Object as PropType<MainPageItemProps>,
         default: () => ({}),
     },
-    index: Number,
 })
-const isMainPageCardEven = computed(() => {
-  return (props.index ?? 1) % 2 === 0;
-})
-
 </script>
 
 <style scoped>
@@ -46,15 +50,26 @@ const isMainPageCardEven = computed(() => {
     margin: 1rem;
 }
 
-.wrapper-item-even{
-    flex-direction: row-reverse;
+.wrapper-item-color{
     background: #B3A2B3;
 }
 
+.wrapper-item-direction{
+    flex-direction: row-reverse;
+}
+
+.wrapper-item-registered{
+    flex-direction: column;
+    align-items: center;
+}
 .details {
     max-width: 40rem;
 }
 
+.details-title{
+    display: flex;
+    align-items: flex-end;
+}
 .details-image {
     display: flex;
     align-items: center;

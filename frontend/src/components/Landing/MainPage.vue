@@ -11,6 +11,8 @@ const pageItems: MainPageItemProps[] = [
         title: 'Week',
         imageSrc: "src\\svg\\Weekly Calendar.svg",
         description: "description information description information description information description information description information description information description information description information description informationdescription informationdescription information",
+        isBackgroundPink: true,
+        isDescriptionOnRight:true,
     },
     {
         title: 'Day',
@@ -21,6 +23,8 @@ const pageItems: MainPageItemProps[] = [
         title: 'Notes',
         imageSrc: "src\\svg\\Notes.svg",
         description: "description information description information description information description information description information description information description information description information description informationdescription informationdescription information",
+        isBackgroundPink: true,
+        isDescriptionOnRight:true,
     },
 ];
 
@@ -28,7 +32,7 @@ const pageItems: MainPageItemProps[] = [
 
 <template>
     <div class="wrapper">
-        <MainPageItem v-for="(item, index) in pageItems" :key="index" :item="item" :index="index + 1" />
+        <MainPageItem v-for="(item, index) in pageItems" :key="index" :item="item"/>
         <div class="sign-up-block">
             <p class="span-sign-up">If you want to use Racoon Notes:</p>
             <button type="button" class="button-sign-up"><span class="span-sign-up">Sign up</span></button>
@@ -46,7 +50,6 @@ const pageItems: MainPageItemProps[] = [
     justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
-
 }
 
 .sign-up-block{
