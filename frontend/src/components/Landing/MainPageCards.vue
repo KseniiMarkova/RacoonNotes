@@ -3,8 +3,8 @@
     :class="[{'wrapper-item-color':item.isBackgroundPink},
     {'wrapper-item-direction':item.isDescriptionOnRight},
     {'wrapper-item-registered':!item.description},]">
-        <div class="details-image">
-            <img :src="item.imageSrc" alt="Photo of block">
+        <div class="details-image"> 
+            <img :src="item.imageSrc" alt="Photo of block" class="img-title">
         </div>
         <div v-if="item.description" class="details">
             <h2>
@@ -37,14 +37,13 @@ const props = defineProps({
 <style scoped>
 .wrapper-item {
     height: 25rem;
-    width: 80rem;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: nowrap;
     padding: 1rem;
     align-items: stretch;
-    justify-content: space-evenly;
     background: rgba(70, 130, 180, 0.46);
     border-radius: 4rem;
     margin: 1rem;
@@ -61,9 +60,10 @@ const props = defineProps({
 .wrapper-item-registered{
     flex-direction: column;
     align-items: center;
+    margin: 2% 5% 1% 5%;
 }
 .details {
-    max-width: 40rem;
+    max-width: 70%;
 }
 
 .details-title{
@@ -84,8 +84,4 @@ h3 {
     font-size: 20px;
 }
 
-img {
-    max-width: 15rem;
-    max-height: 20rem;
-}
 </style>

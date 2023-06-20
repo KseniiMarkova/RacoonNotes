@@ -43,7 +43,6 @@ const pageItems: MainPageItemProps[] = [
 
 <style scoped>
 .wrapper {
-    background-color: #EEE5DE;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;

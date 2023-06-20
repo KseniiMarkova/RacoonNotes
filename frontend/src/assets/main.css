@@ -1,5 +1,9 @@
 @import './base.css';
 
+body{
+  background-color: #EEE5DE;
+}
+
 span, p, h1 {
   font-family: 'Outfit';
   color: #191970;
@@ -9,4 +13,9 @@ h2, h3 {
   font-family: 'Over the Rainbow';
   font-style: normal;
   color: rgba(25, 25, 112, 0.8);
+}
+
+.img-title {
+  max-width: 15rem;
+  max-height: 20rem;
 }
