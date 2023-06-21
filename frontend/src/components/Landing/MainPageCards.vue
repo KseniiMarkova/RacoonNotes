@@ -42,11 +42,11 @@ const props = defineProps({
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: nowrap;
-    padding: 1rem;
     align-items: stretch;
     background: rgba(70, 130, 180, 0.46);
     border-radius: 4rem;
     margin: 1rem;
+    overflow: hidden;
 }
 
 .wrapper-item-color{
@@ -75,9 +75,14 @@ const props = defineProps({
     align-items: center;
 }
 
+.details-image img{
+    max-width: 100%;
+}
+
 h2 {
     font-size: 24px;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 h3 {

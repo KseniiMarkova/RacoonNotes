@@ -10,15 +10,26 @@
             </h2>
         </div>
         <div class="list-notes-block">
-            <h3 class="list-notes-title">
+            <h2 class="list-notes-title">
                 List of Notes:
-            </h3>
-            <ul>
-                <ol>page1</ol>
-                <ol>name of page 2</ol>
-                <ol>a long name of page 3</ol>
-                <ol>a reale reale reale long name page 4</ol>
-            </ul>
+            </h2>
+            <div class="list-container">
+                <ol class="two-coluumn-list">
+                    <li>page1</li>
+                    <li>name of page 2</li>
+                    <li>a long name of page 3</li>
+                    <li>a reale reale reale long name page 4</li>
+                    <li>page1</li>
+                    <li>name of page 2</li>
+                    <li>page1</li>
+                    <li>name of page 2</li>
+                    <li>a long name of page 3</li>
+                    <li>a reale reale reale long name page 4</li>
+                    <li>page1</li>
+                    <li>name of page 2</li>
+                </ol>
+            </div>
+            <button class="list-notes-button">more...</button>
         </div>
     </div>
 </template>
@@ -65,20 +76,30 @@ import type { MainPageItemProps } from './models';
     border-radius: 4rem;
     margin: 1% 5% 1% 5%;
     padding: 1rem;
+    position: relative;
 }
 
 .notes-item-block{
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;   
+    margin: 1rem; 
 }
 
+h2 {
+    margin-bottom: 1rem;
+}
+
+.img-title{
+    margin: 1rem 0 1rem 0;
+}
 .list-notes-block{
+    height: 25rem;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 100%;
-    width: 70%;
+    justify-content: flex-start;
 }
 
 .list-notes-title{
@@ -86,16 +107,49 @@ import type { MainPageItemProps } from './models';
     justify-content: center;
     align-items: center;
     width: 100%;
-    font-weight: bold;
+    height: 10%;
+    margin: 1rem 0 1rem 0;
 }
 
-h2 {
+.list-notes-button{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0;
     font-size: 24px;
-    text-align: center;
-    margin-top: 1rem;
+    font-family: 'Over the Rainbow';
+    font-style: normal;
+    color: rgba(25, 25, 112, 0.8);
+    cursor: pointer;
+    margin: 1rem 0 1rem 0;
+    position: absolute;
+    bottom: 0;
 }
 
-.img-title{
-    margin-top: 1rem;
+.list-container{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    column-gap: 1rem;
+    column-count: 2;
+    overflow: auto;
+    margin: 1rem 0 2rem 0;
+}
+
+.two-coluumn-list{
+    column-count: inherit;
+}
+
+li{
+    margin: 0 1rem 1rem 2rem;
+}
+
+.notes-item-block img{
+    max-width: 100%;
 }
 </style>

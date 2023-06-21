@@ -9,7 +9,7 @@ span, p, h1 {
   color: #191970;
 }
 
-h2, h3 {
+h2, h3, ol {
   font-family: 'Over the Rainbow';
   font-style: normal;
   color: rgba(25, 25, 112, 0.8);
@@ -18,4 +18,5 @@ h2, h3 {
 .img-title {
   max-width: 15rem;
   max-height: 20rem;
+  margin: 1rem 0 1rem 0;
 }

@@ -1,4 +1,4 @@
-import MainPageVue from '@/components/Landing/MainPage.vue';
+// import MainPageVue from '@/components/Landing/MainPage.vue';
 import MainPageRegistered from '@/components/Landing/MainPageRegistered.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 

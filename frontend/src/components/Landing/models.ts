@@ -4,6 +4,7 @@ export interface MainPageItemProps {
     description?: string,
     isBackgroundPink?: boolean,
     isDescriptionOnRight?: boolean,
+    link?: string,
 }
 
 
