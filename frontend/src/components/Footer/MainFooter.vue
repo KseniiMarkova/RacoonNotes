@@ -25,17 +25,16 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    width: 100%;
     background-color: #DAD3CE;
-    padding: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .footer-wrapper{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
-    width: 64rem;
 }
 
 .created-by{
@@ -43,10 +42,10 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-right: 5rem;
 }
 .created-by-information{
     display: flex;
-    width: 30rem;
     justify-content: space-around;
     align-items: center;
 }
@@ -61,9 +60,9 @@
 
 .information-span{
     font-style: normal;
-    font-size: 32px;
+    font-size: 20px;
     color: rgba(25, 25, 112, 0.8);
-
+    margin-left: 4rem;
 }
 
 .information-span-contacts{
@@ -74,10 +73,11 @@
 .inscriptions-span{
     font-style: normal;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 24px;
 }
 
 img{
+    height: 5rem;
     border-radius: 8rem;
 }
 </style>
