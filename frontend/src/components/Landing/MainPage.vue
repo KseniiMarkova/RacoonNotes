@@ -52,34 +52,34 @@ const pageItems: MainPageItemProps[] = [
 }
 
 .sign-up-block{
-    width: 80rem;
-    height: 6rem;
+    width: 90%;
+    height: 4rem;
     display: flex;
     background: rgba(70, 130, 180, 0.3);
     border-radius: 70px;
     justify-content: space-evenly;
     align-items: center;
-
+    overflow: hidden;
 }
 
 .button-sign-up{
     background: rgba(179, 162, 179, 0.5);
     border-radius: 4rem;
-    width: 15rem;
-    height: 4rem;
+    width: 15%;
+    height: 80%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     white-space: nowrap;
+    overflow:hidden;
 }
 
 .span-sign-up{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     font-style: normal;
     text-transform: capitalize;
-    color: #191970;
 }
 
 </style>

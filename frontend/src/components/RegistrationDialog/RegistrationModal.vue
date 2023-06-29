@@ -1,0 +1,79 @@
+<template>
+    <Dialog class="dialog-regisration" v-model:visible="visible" header="Regisration" modal :style="{ width: '30vw' }">
+        <div class="flex justify-content-center p-fluid">
+            <div v-focustrap class="card">
+                <div class="p-float-label p-input-icon-right mt-4 mb-4">
+                    <InputText id="input" v-model="name" type="text" autofocus />
+                    <label for="username">Name</label>
+                    <i class="pi pi-user"></i>
+                </div>
+                <div class="p-float-label p-input-icon-right mb-4">
+                    <InputText id="email" v-model="email" type="email"/>
+                    <label for="username">Email</label>
+                    <i class="pi pi-envelope"></i>
+                </div>
+                <div class="field">
+                    <div class="p-float-label">
+                        <Password v-model="password" toggleMask >
+                            <template #header>
+                                <h6>Pick a password</h6>
+                            </template>
+                            <template #footer>
+                                <div class="mt-0">Suggestions</div>
+                                <ul class="pl-1 ml-1 mt-0" style="line-height: 1.5">
+                                    <li>At least one lowercase</li>
+                                    <li>At least one uppercase</li>
+                                    <li>At least one numeric</li>
+                                    <li>Minimum 8 characters</li>
+                                </ul>
+                            </template>
+                        </Password>
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="field field-checkbox">
+                    <Checkbox id="accept" v-model="accept" name="accept" value="Accept" />
+                    <label for="accept">I agree to the terms and conditions*</label>
+                </div>
+                <Button type="submit" label="Submit" class="bg-blue-200 mt-2"></Button>
+            </div>
+        </div>
+    </Dialog>
+</template>
+
+<script setup lang="ts">
+import { ref, watchEffect } from 'vue';
+import Dialog from 'primevue/dialog';
+import Password from 'primevue/password';
+import InputText from 'primevue/inputtext';
+import Checkbox from 'primevue/checkbox';
+import { userStore } from '@/stores/user/index';
+import Button from 'primevue/button';
+
+const store = userStore();
+
+const props = defineProps({
+    isVisible: Boolean,
+});
+const visible = ref(false);
+watchEffect(() => (visible.value = props.isVisible));
+
+const name = ref();
+const email = ref();
+const password = ref();
+const accept = ref();
+const value = ref(null);
+</script>
+
+<style scoped>
+:deep(.p-dialog .p-dialog-header) {
+    padding-bottom: 0 !important;
+}
+.dialog-heading{
+    font-size:larger;
+}
+.dialog-regisration{
+    background-color: #EEE5DE;
+}
+
+</style>
