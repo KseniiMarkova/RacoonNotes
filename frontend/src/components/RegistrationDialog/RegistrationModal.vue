@@ -35,7 +35,7 @@
                     <Checkbox id="accept" v-model="accept" name="accept" value="Accept" />
                     <label for="accept">I agree to the terms and conditions*</label>
                 </div>
-                <Button type="submit" label="Submit" class="bg-blue-200 mt-2"></Button>
+                <Button type="submit" label="Submit" class="bg-blue-200 mt-2 shadow-none hover:bg-blue-400"></Button>
             </div>
         </div>
     </Dialog>
@@ -65,10 +65,7 @@ const accept = ref();
 const value = ref(null);
 </script>
 
-<style scoped>
-:deep(.p-dialog .p-dialog-header) {
-    padding-bottom: 0 !important;
-}
+<style>
 .dialog-heading{
     font-size:larger;
 }
@@ -76,4 +73,7 @@ const value = ref(null);
     background-color: #EEE5DE;
 }
 
+.card .p-inputtext:enabled:focus {
+  box-shadow: none; 
+}
 </style>

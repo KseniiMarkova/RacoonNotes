@@ -1,8 +1,22 @@
+<template>
+    <div class="header">
+        <img alt="Logo" class="logo" src="@/svg/Logo.svg" width="50" height="50" />
+        <HeaderItem v-for="(item, index) in headerItems" :key="index" :item="item"/>
+        <!-- <RegistrationModal :isVisible="visible" /> -->
+        <SingInModal />
+        <button type="button" class="button-sign-in" @click="store.switchUserModalVisibility">
+            <span class="span-sign-in">Sign in</span>
+        </button>
+    </div>
+</template>
+
 <script setup lang="ts">
-import { ref } from 'vue';
 import RegistrationModal from '../RegistrationDialog/RegistrationModal.vue';
 import HeaderItem from './HeaderItem.vue';
 import type { HeaderItemsProps } from './models';
+import SingInModal from '../RegistrationDialog/SingInModal.vue';
+import {userStore} from '@/stores/user/index';
+
 const headerItems: HeaderItemsProps[] = [
     {heading: 'MONTH'},
     {heading: 'WEEK'},
@@ -11,18 +25,8 @@ const headerItems: HeaderItemsProps[] = [
     {heading: 'Links'}
 ]; 
 
-const visible = ref(false);
-function  onButtonClick() {visible.value = !visible.value }
+const store = userStore();
 </script>
-
-<template>
-    <div class="header">
-        <img alt="Logo" class="logo" src="@/svg/Logo.svg" width="50" height="50" />
-        <HeaderItem v-for="(item, index) in headerItems" :key="index" :item="item"/>
-        <RegistrationModal :isVisible="visible" />
-        <button type="button" class="button-sign-in" @click="onButtonClick"> <span class="span-sign-in">Sign in</span> </button>
-    </div>
-</template>
 
 <style scoped>
 .header {

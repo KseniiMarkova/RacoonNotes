@@ -1,13 +1,22 @@
 import { defineStore } from "pinia";
-import { getters } from "./getters";
-import { actions } from "./actions";
-import type { userState } from "./models"
 
 export const userStore = defineStore('user', {
-    state: (): userState => ({
-        user: '',
+    state: () => ({
+        user:
+        {
+            name: '',
+            email: '',
+            password: '',
+            country: '',
+        },
+        isVisible: false,
     }),
-    getters: getters,
-    actions: actions,
-  })
-  
+    getters:{
+        getUser: (state) => state.user,
+    },
+    actions: {
+        switchUserModalVisibility() {
+            this.isVisible = !this.isVisible;
+        },
+    },
+})

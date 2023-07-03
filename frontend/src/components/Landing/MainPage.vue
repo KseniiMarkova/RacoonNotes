@@ -35,7 +35,9 @@ const pageItems: MainPageItemProps[] = [
         <MainPageItem v-for="(item, index) in pageItems" :key="index" :item="item"/>
         <div class="sign-up-block">
             <p class="span-sign-up">If you want to use Racoon Notes:</p>
-            <button type="button" class="button-sign-up"><span class="span-sign-up">Sign up</span></button>
+            <button type="button" class="button-sign-up">
+                <span class="span-sign-up">Sign up</span>
+            </button>
         </div>
     </div>
 </template>
