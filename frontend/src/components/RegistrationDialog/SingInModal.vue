@@ -1,5 +1,4 @@
 <template>
-<Dialog class="dialog-regisration" v-model:visible="isVisible" header="Regisration" modal :style="{ width: '30vw'}">
     <div class="flex justify-content-center p-fluid">
         <div v-focustrap class="card">
             <div class="p-float-label p-input-icon-right mt-4 mb-4">
@@ -27,32 +26,22 @@
                 </div>
             </div>
             <Button type="submit" label="Sing in" class="bg-blue-200 mt-2 mb-2 shadow-none hover:bg-blue-400"></Button>
-            <Button label="Registration" link class="shadow-none"></Button>
+            <Button label="Registration" link class="shadow-none" @click="store.setRegistrationModal"></Button>
         </div>
     </div>
-</Dialog>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import Dialog from 'primevue/dialog';
+import { userStore } from '@/stores/user/index';
 import Password from 'primevue/password';
 import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
-import {userStore} from '@/stores/user/index';
-import { storeToRefs } from 'pinia';
- 
+
+const store = userStore();
+
 const email = ref();
 const password = ref();
-const store = userStore();
-const { isVisible } = storeToRefs(store);
 </script>
 
-<style>
-.card .p-inputtext:enabled:focus {
-  box-shadow: none; 
-}
-.p-overflow-hidden {
-  overflow: auto !important;
-}
-</style>
+<style></style>

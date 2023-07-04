@@ -10,6 +10,7 @@ export const userStore = defineStore('user', {
             country: '',
         },
         isVisible: false,
+        isSignInModal: true,
     }),
     getters:{
         getUser: (state) => state.user,
@@ -17,6 +18,12 @@ export const userStore = defineStore('user', {
     actions: {
         switchUserModalVisibility() {
             this.isVisible = !this.isVisible;
+        },
+        setSignInModal(){
+            this.isSignInModal = true;
+        },
+        setRegistrationModal(){
+            this.isSignInModal = false;
         },
     },
 })
