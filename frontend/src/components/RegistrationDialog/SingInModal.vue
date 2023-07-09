@@ -2,12 +2,7 @@
     <div class="flex justify-content-center p-fluid">
         <div v-focustrap class="card">
             <div class="p-float-label p-input-icon-right mt-4 mb-4">
-                <InputText id="input" v-model="name" type="text" autofocus />
-                <label for="username">Name</label>
-                <i class="pi pi-user"></i>
-            </div>
-            <div class="p-float-label p-input-icon-right mb-4">
-                <InputText id="email" v-model="email" type="email" />
+                <InputText id="email" v-model="email" type="email" class="shadow-none" />
                 <label for="username">Email</label>
                 <i class="pi pi-envelope"></i>
             </div>
@@ -30,30 +25,23 @@
                     <label for="password">Password</label>
                 </div>
             </div>
-            <div class="field field-checkbox">
-                <Checkbox id="accept" v-model="accept" name="accept" value="Accept" />
-                <label for="accept">I agree to the terms and conditions*</label>
-            </div>
-            <Button type="submit" label="Submit" class="bg-blue-200 mt-2 shadow-none hover:bg-blue-400"></Button>
-            <Button label="Sign in" link class="shadow-none pb-0" @click="store.setSignInModal"></Button>
+            <Button type="submit" label="Sing in" class="bg-blue-200 mt-2 mb-2 shadow-none hover:bg-blue-400"></Button>
+            <Button label="Registration" link class="shadow-none" @click="store.setRegistrationModal"></Button>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref, } from 'vue';
+import { ref } from 'vue';
 import { userStore } from '@/stores/user/index';
 import Password from 'primevue/password';
 import InputText from 'primevue/inputtext';
-import Checkbox from 'primevue/checkbox';
 import Button from 'primevue/button';
 
+const store = userStore();
 
-const name = ref();
 const email = ref();
 const password = ref();
-const accept = ref();
-const store = userStore();
 </script>
 
 <style></style>
