@@ -3,12 +3,12 @@
         <div v-focustrap class="card">
             <div class="p-float-label p-input-icon-right mt-4 mb-4">
                 <InputText id="input" v-model="name" type="text" autofocus />
-                <label for="username">Name</label>
+                <label for="input">Name</label>
                 <i class="pi pi-user"></i>
             </div>
             <div class="p-float-label p-input-icon-right mb-4">
                 <InputText id="email" v-model="email" type="email" />
-                <label for="username">Email</label>
+                <label for="email">Email</label>
                 <i class="pi pi-envelope"></i>
             </div>
             <div class="field">
