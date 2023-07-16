@@ -1,6 +1,8 @@
 <template>
     <div class="header">
-        <img alt="Logo" class="logo" src="@/svg/Logo.svg" width="50" height="50" />
+        <router-link :to="{ name: 'home' }" :key="$route.fullPath">
+            <img alt="Logo" class="logo" src="@/svg/Logo.svg" width="50" height="50" />
+        </router-link>
         <HeaderItem v-for="(item, index) in headerItems" :key="index" :item="item"/>
         <MainRegistration/>
         <button type="button" class="button-sign-in" @click="toggleModal">
@@ -29,16 +31,6 @@ const toggleModal = () => {
     store.setSignInModal();
 }
 </script>
-
-<template>
-    <div class="header">
-        <router-link :to="{ name: 'home' }" :key="$route.fullPath">
-            <img alt="Logo" class="logo" src="@/svg/Logo.svg" width="50" height="50" />
-        </router-link>
-        <HeaderItem v-for="(item, index) in headerItems" :key="index" :item="item" />
-        <button type="button" class="button-sign-in"> <span class="span-sign-in">Sign in</span> </button>
-    </div>
-</template>
 
 <style scoped>
 .header {
