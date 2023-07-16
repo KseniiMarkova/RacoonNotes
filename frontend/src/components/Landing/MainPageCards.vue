@@ -83,10 +83,12 @@ h2 {
     font-size: 24px;
     text-align: center;
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 h3 {
     font-size: 20px;
+    font-weight: bold;
 }
 
 </style>

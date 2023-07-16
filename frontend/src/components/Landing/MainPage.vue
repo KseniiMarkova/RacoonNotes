@@ -88,7 +88,6 @@ const toggleModal = () => {
     font-size: 30px;
     font-weight: 600;
     font-style: normal;
-    text-transform: capitalize;
 }
 
 </style>

@@ -1,5 +1,6 @@
 import MainPageVue from '@/components/Landing/MainPage.vue';
-import { createRouter, createWebHistory } from 'vue-router';
+import NoteItemVue from '@/components/Notes/NoteItem.vue';
+import { createRouter, createWebHistory} from 'vue-router';
 
 
 const router = createRouter({
@@ -9,6 +10,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: MainPageVue,
+    },
+    {
+      path: '/notes',
+      name: 'notes',
+      component: NoteItemVue,
     },
   ]
 })
