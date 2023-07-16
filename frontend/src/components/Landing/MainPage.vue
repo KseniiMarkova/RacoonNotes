@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import MainPageItem from './MainPageCards.vue'
 import type { MainPageItemProps } from './models';
+import {userStore} from '@/stores/user/index';
+
 const pageItems: MainPageItemProps[] = [
     {
         title: 'Month',
@@ -27,7 +29,12 @@ const pageItems: MainPageItemProps[] = [
         isDescriptionOnRight:true,
     },
 ];
+const store = userStore();
 
+const toggleModal = () => {
+    store.switchUserModalVisibility();
+    store.setRegistrationModal();
+}
 </script>
 
 <template>
@@ -35,7 +42,9 @@ const pageItems: MainPageItemProps[] = [
         <MainPageItem v-for="(item, index) in pageItems" :key="index" :item="item"/>
         <div class="sign-up-block">
             <p class="span-sign-up">If you want to use Racoon Notes:</p>
-            <button type="button" class="button-sign-up"><span class="span-sign-up">Sign up</span></button>
+            <button type="button" class="button-sign-up" @click="toggleModal">
+                <span class="span-sign-up">Sign up</span>
+            </button>
         </div>
     </div>
 </template>
@@ -52,34 +61,34 @@ const pageItems: MainPageItemProps[] = [
 }
 
 .sign-up-block{
-    width: 80rem;
-    height: 6rem;
+    width: 90%;
+    height: 4rem;
     display: flex;
     background: rgba(70, 130, 180, 0.3);
     border-radius: 70px;
     justify-content: space-evenly;
     align-items: center;
-
+    overflow: hidden;
 }
 
 .button-sign-up{
     background: rgba(179, 162, 179, 0.5);
     border-radius: 4rem;
-    width: 15rem;
-    height: 4rem;
+    width: 15%;
+    height: 80%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     white-space: nowrap;
+    overflow:hidden;
 }
 
 .span-sign-up{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     font-style: normal;
     text-transform: capitalize;
-    color: #191970;
 }
 
 </style>

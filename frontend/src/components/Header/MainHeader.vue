@@ -1,6 +1,20 @@
+<template>
+    <div class="header">
+        <img alt="Logo" class="logo" src="@/svg/Logo.svg" width="50" height="50" />
+        <HeaderItem v-for="(item, index) in headerItems" :key="index" :item="item"/>
+        <MainRegistration/>
+        <button type="button" class="button-sign-in" @click="toggleModal">
+            <span class="span-sign-in">Sign in</span>
+        </button>
+    </div>
+</template>
+
 <script setup lang="ts">
+import MainRegistration from '../RegistrationDialog/MainRegistration.vue';
 import HeaderItem from './HeaderItem.vue';
 import type { HeaderItemsProps } from './models';
+import {userStore} from '@/stores/user/index';
+
 const headerItems: HeaderItemsProps[] = [
     {heading: 'MONTH'},
     {heading: 'WEEK'},
@@ -8,16 +22,13 @@ const headerItems: HeaderItemsProps[] = [
     {heading: 'NOTES'},
     {heading: 'Links'}
 ]; 
+const store = userStore();
 
+const toggleModal = () => {
+    store.switchUserModalVisibility();
+    store.setSignInModal();
+}
 </script>
-
-<template>
-    <div class="header">
-        <img alt="Logo" class="logo" src="@/svg/Logo.svg" width="50" height="50" />
-        <HeaderItem v-for="(item, index) in headerItems" :key="index" :item="item"/>
-        <button type="button" class="button-sign-in"> <span class="span-sign-in">Sign in</span> </button>
-    </div>
-</template>
 
 <style scoped>
 .header {

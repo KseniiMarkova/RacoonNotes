@@ -4,7 +4,7 @@
     {'wrapper-item-direction':item.isDescriptionOnRight},
     {'wrapper-item-registered':!item.description},]">
         <div class="details-image"> 
-            <img :src="item.imageSrc" alt="Photo of block" class="img-title">
+            <img :src="item.imageSrc" :alt="item.title" class="img-title">
         </div>
         <div v-if="item.description" class="details">
             <h2>
