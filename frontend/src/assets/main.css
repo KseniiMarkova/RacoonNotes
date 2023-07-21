@@ -13,7 +13,7 @@ span, p, h1, .p-inputtext {
   color: #191970;
 }
 
-h2, h3, ol {
+h2, h3, ol, ul {
   font-family: 'Over the Rainbow';
   font-style: normal;
   color: rgba(25, 25, 112, 0.8);
@@ -29,17 +29,15 @@ h2, h3, ol {
   box-shadow: none; 
 }
 
-.p-editor-container .p-editor-content .ql-editor ,
-.p-inputtext ,
-.p-editor-container .p-editor-toolbar.ql-snow {
-  font-size: large;
-  background-color: rgba(218, 211, 206, 0.80);
+.button-sign-in {
+  background: #E8D2D9;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
 }
 
-.p-button{
-  background: rgba(179, 162, 179, 0.5);
-}
-
-.p-button:hover{
-  background: blueviolet;
+.button-sign-in:hover{
+  background: #B3A2B3;
 }

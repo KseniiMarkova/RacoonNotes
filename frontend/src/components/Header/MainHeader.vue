@@ -47,20 +47,19 @@ const toggleModal = () => {
 }
 
 .button-sign-in {
-    width: 9rem;
-    height: 3.5rem;
-    background-color: rgba(179, 162, 179, 0.5);
+    width: 8rem;
+    height: 3rem;
     border-radius: 1rem;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
 }
 
 .span-sign-in {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.p-editor-container .p-editor-content .ql-editor {
+    font-family: 'Outfit';
+    color: #191970;
 }
 </style>

@@ -42,7 +42,7 @@ const toggleModal = () => {
         <MainPageItem v-for="(item, index) in pageItems" :key="index" :item="item"/>
         <div class="sign-up-block">
             <p class="span-sign-up">If you want to use Racoon Notes:</p>
-            <button type="button" class="button-sign-up" @click="toggleModal">
+            <button type="button" class="button-sign-in" @click="toggleModal">
                 <span class="span-sign-up">Sign up</span>
             </button>
         </div>
@@ -71,16 +71,10 @@ const toggleModal = () => {
     overflow: hidden;
 }
 
-.button-sign-up{
-    background: rgba(179, 162, 179, 0.5);
+.button-sign-in{
     border-radius: 4rem;
     width: 15%;
     height: 80%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
     overflow:hidden;
 }
 

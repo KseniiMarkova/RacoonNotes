@@ -6,9 +6,6 @@
         <Editor v-model="value1" class="textArea-description" editorStyle="height: 320px" />
         <div class="wrapper-button-save">
             <Button type="button" label="Save Note" icon="pi pi-search" :loading="loading" @click="load" />
-            <button type="button" class="button-save"> 
-                <span class="span-save">Save Note</span> 
-            </button>
         </div>
     </div>
 </template>
@@ -48,18 +45,34 @@ const load = () => {
 h2 {
     margin-left: 5%;
 }
+
 :deep() {
-    p, .p-inputtext{
-    color: #6C594C;
-}
+    .p-inputtext {
+        color: #6C594C;
+    }
 }
 
+:deep() {
+    .p-inputtext,
+    .p-editor-container .p-editor-toolbar.ql-snow,
+    .p-editor-container .p-editor-content .ql-editor {
+        font-size: large;
+        background-color: #DAD3CE;
+    }
+}
+
+.p-button{
+  background: #E8D2D9;
+}
+:deep(.p-button[data-v-563f8311]:hover){
+    background: #B3A2B3;
+}
 .textArea-description {
     margin-bottom: 2%;
     max-height: 100%;
 }
 
-.button-save{
+.button-save {
     background: rgba(179, 162, 179, 0.5);
     border-radius: 4rem;
     width: 10rem;
@@ -71,16 +84,22 @@ h2 {
     white-space: nowrap;
 }
 
-.span-save{
+.span-save {
     font-size: 30px;
     font-weight: 600;
     font-style: normal;
     text-transform: capitalize;
 }
 
-.wrapper-button-save{
+.wrapper-button-save {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+}
+
+:deep(){
+    ol, ul{
+    font-family: 'Outfit';
+    }
 }
 </style>
