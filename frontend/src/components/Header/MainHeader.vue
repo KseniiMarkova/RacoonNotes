@@ -18,11 +18,11 @@ import type { HeaderItemsProps } from './models';
 import {userStore} from '@/stores/user/index';
 
 const headerItems: HeaderItemsProps[] = [
-    { heading: 'MONTH', link: 'notes' },
-    { heading: 'WEEK', link: 'notes' },
-    { heading: 'DAY', link: 'notes' },
+    { heading: 'MONTH', link: 'month' },
+    { heading: 'WEEK', link: 'week' },
+    { heading: 'DAY', link: 'day' },
     { heading: 'NOTES', link: 'notes' },
-    { heading: 'List', link: 'notes' }
+    { heading: 'List', link: 'list' }
 ]; 
 const store = userStore();
 
