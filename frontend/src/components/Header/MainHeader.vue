@@ -1,6 +1,8 @@
 <template>
     <div class="header">
-        <img alt="Logo" class="logo" src="@/svg/Logo.svg" width="50" height="50" />
+        <router-link :to="{ name: 'home' }" :key="$route.fullPath">
+            <img alt="Logo" class="logo" src="@/svg/Logo.svg" width="50" height="50" />
+        </router-link>
         <HeaderItem v-for="(item, index) in headerItems" :key="index" :item="item"/>
         <MainRegistration/>
         <button type="button" class="button-sign-in" @click="toggleModal">
@@ -16,11 +18,11 @@ import type { HeaderItemsProps } from './models';
 import {userStore} from '@/stores/user/index';
 
 const headerItems: HeaderItemsProps[] = [
-    {heading: 'MONTH'},
-    {heading: 'WEEK'},
-    {heading: 'DAY'},
-    {heading: 'NOTES'},
-    {heading: 'Links'}
+    { heading: 'MONTH', link: 'month' },
+    { heading: 'WEEK', link: 'week' },
+    { heading: 'DAY', link: 'day' },
+    { heading: 'NOTES', link: 'notes' },
+    { heading: 'List', link: 'list' }
 ]; 
 const store = userStore();
 
@@ -45,21 +47,19 @@ const toggleModal = () => {
 }
 
 .button-sign-in {
-    width: 9rem;
-    height: 3.5rem;
-    background-color: rgba(179, 162, 179, 0.5);
+    width: 8rem;
+    height: 3rem;
     border-radius: 1rem;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
 }
 
 .span-sign-in {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
 }
 
+.p-editor-container .p-editor-content .ql-editor {
+    font-family: 'Outfit';
+    color: #191970;
+}
 </style>

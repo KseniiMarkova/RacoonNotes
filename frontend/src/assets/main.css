@@ -8,12 +8,12 @@ body{
   background-color: #EEE5DE;
 }
 
-span, p, h1 {
+span, p, h1, .p-inputtext {
   font-family: 'Outfit';
   color: #191970;
 }
 
-h2, h3, ol {
+h2, h3, ol, ul {
   font-family: 'Over the Rainbow';
   font-style: normal;
   color: rgba(25, 25, 112, 0.8);
@@ -23,4 +23,21 @@ h2, h3, ol {
   max-width: 15rem;
   max-height: 20rem;
   margin: 1rem 0 1rem 0;
+}
+
+.p-inputtext:enabled:focus {
+  box-shadow: none; 
+}
+
+.button-sign-in {
+  background: #E8D2D9;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.button-sign-in:hover{
+  background: #B3A2B3;
 }

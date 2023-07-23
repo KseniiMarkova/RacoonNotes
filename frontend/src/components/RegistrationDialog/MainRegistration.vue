@@ -22,7 +22,7 @@ const dialogHeading = computed(() => {
 
 <style>
 .p-overflow-hidden {
-  overflow: auto !important;
+  overflow: auto;
 }
 .dialog-heading{
     font-size:larger;
